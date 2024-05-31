@@ -104,7 +104,7 @@ def schedule_passes():
             end=pass_time[1]
             duration=(end-begin).total_seconds()
             print(f"Satellite: {satellite_name} - {begin.strftime('%d/%m %H:%M:%S')} - Duration: {int((duration// 60) % 60)} mins - Max elevation: {int(alt.degrees)}°")
-            schedule.every().day.at(begin.strftime('%H:%M:%S')).do(os.system, f"python recieve_process_multithread_AM.py {satellite_name.replace(" ","_")} {frequency} {tle1.replace(" ","_")} {tle2.replace(" ","_")}")
+            schedule.every().day.at(begin.strftime('%H:%M:%S')).do(os.system, f"python recieve_process_multithread_NFM.py {satellite_name.replace(" ","_")} {frequency} {tle1.replace(" ","_")} {tle2.replace(" ","_")}")
 
     # Start the countdown to the next pass
     next_passes.sort()
