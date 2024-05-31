@@ -38,7 +38,7 @@ The **Polar Operational Environmental Satellites (POES)** are a constellation of
 In summary, the POES satellites provide critical data for weather monitoring, climate research, and various environmental applications, contributing to our understanding of Earth's atmosphere and surface¹². You can find more information on the latest POES satellite status [here](https://www.ospo.noaa.gov/Operations/POES/status.html).
 
 ## THE APT SIGNAL
-<img src="https://www.sigidwiki.com/images/thumb/d/d8/APT_format.png/270px-APT_format.png" width="40%" height="40%">
+![image](https://github.com/SirAlexanderTheFourth/NOAA-APT-Python-Processor/assets/113352655/50c63aba-64ff-4d0f-92a6-30fea0ad18c9)
 
 
 The **Automatic Picture Transmission (APT)** format is a method used to transmit weather satellite images from polar-orbiting satellites to ground stations. Here's a concise overview:
