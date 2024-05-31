@@ -68,12 +68,18 @@ pip install os sys time requests skyfield pytz queue threading subprocess rtlsdr
 ```
 
 ### Windows:
-install the windows-specific dependency:
+install the Windows-specific dependency:
 ```TERMINAL
 pip install schedule
 ```
 
-
-
 ### Linux:
+install the Linux-specific dependency:
+```TERMINAL
+pip install python-crontab
+```
+Make sure the script has execute permissions:
+```TERMINAL
+chmod +x scheduler.py
+```
 you will need to download and install	[pycsdr](https://github.com/jketterl/pycsdr)
