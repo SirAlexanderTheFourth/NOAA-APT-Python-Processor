@@ -2,7 +2,8 @@
 A repository aiming to to schedule, tune in and process NOAA POES passes by recieving their APT signal and converting it to images
 
 ## NOAA POES SATELLITES
-![image](https://cdn.mos.cms.futurecdn.net/Sx2PsebqPzCPCMnau3K5Bh-1200-80.jpg)
+<img src="https://cdn.mos.cms.futurecdn.net/Sx2PsebqPzCPCMnau3K5Bh-1200-80.jpg" width="75%" height="75%">
+
 The **Polar Operational Environmental Satellites (POES)** are a constellation of polar-orbiting weather satellites funded by the National Oceanic and Atmospheric Administration (NOAA). These satellites play a crucial role in improving the accuracy and detail of weather analysis and forecasting. Here are some key points about the POES system:
 
 1. **Orbit and Coverage**:
@@ -37,7 +38,8 @@ The **Polar Operational Environmental Satellites (POES)** are a constellation of
 In summary, the POES satellites provide critical data for weather monitoring, climate research, and various environmental applications, contributing to our understanding of Earth's atmosphere and surface¹². You can find more information on the latest POES satellite status [here](https://www.ospo.noaa.gov/Operations/POES/status.html).
 
 ## THE APT SIGNAL
-![image](https://www.sigidwiki.com/images/thumb/d/d8/APT_format.png/270px-APT_format.png)
+<img src="https://www.sigidwiki.com/images/thumb/d/d8/APT_format.png/270px-APT_format.png" width="40%" height="40%">
+
 
 The **Automatic Picture Transmission (APT)** format is a method used to transmit weather satellite images from polar-orbiting satellites to ground stations. Here's a concise overview:
 
