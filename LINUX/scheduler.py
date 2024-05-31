@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import time
@@ -24,14 +26,15 @@ def calculate_passes(satellite, observer, start_time, end_time, ts):
 # Function to update TLE data
 def update_tle_data():
     tle_data = {}
-    with open("TLE.txt") as tle_file:
+    tle_file_path = os.path.join(os.path.dirname(__file__), "TLE.txt")
+    with open(tle_file_path) as tle_file:
         s = tle_file.readlines()
     if (datetime.now() - datetime.strptime(s[0].replace('\n', ''), "%Y-%m-%d %H:%M:%S.%f")) > timedelta(days=2):
         print("TLE out of date, updating...")
         url = "https://celestrak.org/NORAD/elements/gp.php?GROUP=weather&FORMAT=tle"
         response = requests.get(url)
         lines = response.text.split("\n")
-        with open("TLE.txt", "w") as tle_file:
+        with open(tle_file_path, "w") as tle_file:
             tle_file.write(str(datetime.now()) + "\n")
             tle_file.write(response.text.replace("\n", ""))
         l = 0
@@ -81,7 +84,7 @@ def schedule_passes():
             print(f"Satellite: {satellite_name} - {begin.strftime('%d/%m %H:%M:%S')} - Duration: {int((duration // 60) % 60)} mins - Max elevation: {int(alt.degrees)}°")
 
             # Create cron job
-            job = cron.new(command=f"python3 recieve_process_multithread_AM.py {satellite_name.replace(' ', '_')} {frequency} {tle1.replace(' ', '_')} {tle2.replace(' ', '_')}")
+            job = cron.new(command=f"/usr/bin/env python3 {os.path.join(os.path.dirname(__file__), 'recieve_process_multithread_NFM.py')} {satellite_name.replace(' ', '_')} {frequency} {tle1.replace(' ', '_')} {tle2.replace(' ', '_')}")
             job.minute.on(begin.minute)
             job.hour.on(begin.hour)
             job.dom.on(begin.day)
@@ -117,7 +120,8 @@ if __name__ == "__main__":
 
     # Create cron job for this script to run daily
     cron = CronTab(user=True)
-    job = cron.new(command=f"python3 {os.path.abspath(__file__)}")
+    script_path = os.path.abspath(__file__)
+    job = cron.new(command=f"/usr/bin/env python3 {script_path}")
     job.minute.on(0)
     job.hour.on(0)
     job.dom.on('*')
