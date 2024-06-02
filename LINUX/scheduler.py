@@ -87,9 +87,8 @@ def schedule_passes():
             job = cron.new(command=f"/usr/bin/env python3 {os.path.join(os.path.dirname(__file__), 'recieve_process_multithread_NFM.py')} {satellite_name.replace(' ', '_')} {frequency} {tle1.replace(' ', '_')} {tle2.replace(' ', '_')}")
             job.minute.on(begin.minute)
             job.hour.on(begin.hour)
-            job.dom.on(begin.day)
+            job.day.on(begin.day)
             job.month.on(begin.month)
-            job.dow.on('*')  # Every day of the week
             cron.write()
 
     # Start the countdown to the next pass
@@ -124,7 +123,5 @@ if __name__ == "__main__":
     job = cron.new(command=f"/usr/bin/env python3 {script_path}")
     job.minute.on(0)
     job.hour.on(0)
-    job.dom.on('*')
-    job.month.on('*')
-    job.dow.on('*')
+    job.dow.on('0')  # This should be updated to run the main script daily
     cron.write()
