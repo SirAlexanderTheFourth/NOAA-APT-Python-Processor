@@ -64,19 +64,19 @@ The **Automatic Picture Transmission (APT)** format is a method used to transmit
 ## HOW TO INSTALL
 first of all you will need to install the dependencies:
 ```TERMINAL
-pip install os sys time requests skyfield pytz queue threading subprocess rtlsdr numpy scipy
+pip3 install requests skyfield pytz pyrtlsdr numpy scipy
 ```
 
 ### Windows:
 install the Windows-specific dependency:
 ```TERMINAL
-pip install schedule
+pip3 install schedule
 ```
 
 ### Linux:
 install the Linux-specific dependency:
 ```TERMINAL
-pip install python-crontab
+pip3 install python-crontab
 ```
 Make sure the script has execute permissions:
 ```TERMINAL
