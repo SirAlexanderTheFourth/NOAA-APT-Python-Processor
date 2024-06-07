@@ -68,12 +68,18 @@ pip3 install requests skyfield pytz pyrtlsdr numpy scipy
 ```
 
 ### Windows:
+if you haven't already install the sdr package [here](https://www.rtl-sdr.com/tag/install-guide/)
+
 install the Windows-specific dependency:
 ```TERMINAL
 pip3 install schedule
 ```
 
 ### Linux:
+install rtl-sdr:
+```
+sudo apt install -y rtl-sdr
+```
 install the Linux-specific dependency:
 ```TERMINAL
 pip3 install python-crontab
