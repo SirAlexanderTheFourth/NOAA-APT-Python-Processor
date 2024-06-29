@@ -1,5 +1,5 @@
 # NOAA-APT-Python-Processor
-A repository aiming to to schedule, tune in and process NOAA POES passes by recieving their APT signal and converting it to images
+A repository aiming to schedule, tune in and process NOAA POES passes by recieving their APT signal and converting it to images
 
 ## NOAA POES SATELLITES
 <img src="https://cdn.mos.cms.futurecdn.net/Sx2PsebqPzCPCMnau3K5Bh-1200-80.jpg" width="75%" height="75%">
